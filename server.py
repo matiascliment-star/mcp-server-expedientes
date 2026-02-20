@@ -30,25 +30,25 @@ async def buscar_caso(nombre: str) -> str:
     if not palabras:
         return json.dumps({"error": "Debe proporcionar un nombre para buscar."})
 
-    filters = [f"caratula.ilike.%{palabra}%" for palabra in palabras]
-
     headers = {
         "apikey": SUPABASE_KEY,
         "Authorization": f"Bearer {SUPABASE_KEY}",
     }
 
-    # Solo pedir las columnas necesarias: id, caratula, estado
+    url = f"{SUPABASE_URL}/rest/v1/expedientes"
     select = "id,caratula,estado"
 
-    if len(filters) == 1:
-        full_url = f"{SUPABASE_URL}/rest/v1/expedientes?select={select}&caratula=ilike.%25{palabras[0]}%25&limit=5"
+    # Usar httpx params para que codifique correctamente los %
+    params = {"select": select, "limit": "5"}
+    if len(palabras) == 1:
+        params["caratula"] = f"ilike.%{palabras[0]}%"
     else:
-        conditions = ",".join(filters)
-        full_url = f"{SUPABASE_URL}/rest/v1/expedientes?select={select}&and=({conditions})&limit=5"
+        conditions = ",".join([f"caratula.ilike.%{p}%" for p in palabras])
+        params["and"] = f"({conditions})"
 
     try:
         async with httpx.AsyncClient(timeout=10.0) as client:
-            response = await client.get(full_url, headers=headers)
+            response = await client.get(url, headers=headers, params=params)
     except Exception as e:
         return json.dumps({
             "error": f"No se pudo conectar a Supabase: {type(e).__name__}: {str(e)}",
