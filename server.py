@@ -75,5 +75,18 @@ async def buscar_caso(nombre: str) -> str:
     }, ensure_ascii=False)
 
 
+@mcp.tool()
+async def debug_config() -> str:
+    """Muestra si las variables de entorno estan configuradas (sin revelar valores completos)."""
+    url_set = bool(SUPABASE_URL)
+    key_set = bool(SUPABASE_KEY)
+    return json.dumps({
+        "SUPABASE_URL_configured": url_set,
+        "SUPABASE_URL_preview": SUPABASE_URL[:30] + "..." if url_set else "(empty)",
+        "SUPABASE_KEY_configured": key_set,
+        "PORT": PORT,
+    })
+
+
 if __name__ == "__main__":
     mcp.run(transport="http", host="0.0.0.0", port=PORT, path="/mcp")
