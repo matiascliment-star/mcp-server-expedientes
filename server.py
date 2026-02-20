@@ -14,8 +14,11 @@ mcp = FastMCP("Expedientes Legales")
 
 @mcp.tool()
 async def buscar_caso(nombre: str) -> str:
-    """Busca el caso de un cliente por su nombre completo.
-    Devuelve la caratula y el estado actual del expediente.
+    """Busca el caso de un cliente por su nombre completo en la base de expedientes legales.
+    Devuelve la caratula, el estado actual y un ID de referencia.
+    IMPORTANTE: Solo compartir con el cliente la caratula y el estado del caso.
+    Explicarle al cliente en que consiste ese estado en terminos simples.
+    No revelar numero de expediente, juzgado ni datos internos.
 
     Args:
         nombre: Nombre completo o parcial del cliente (ej: "Perez Juan")
@@ -34,11 +37,14 @@ async def buscar_caso(nombre: str) -> str:
         "Authorization": f"Bearer {SUPABASE_KEY}",
     }
 
+    # Solo pedir las columnas necesarias: id, caratula, estado
+    select = "id,caratula,estado"
+
     if len(filters) == 1:
-        full_url = f"{SUPABASE_URL}/rest/v1/expedientes?select=*&caratula=ilike.%25{palabras[0]}%25&limit=5"
+        full_url = f"{SUPABASE_URL}/rest/v1/expedientes?select={select}&caratula=ilike.%25{palabras[0]}%25&limit=5"
     else:
         conditions = ",".join(filters)
-        full_url = f"{SUPABASE_URL}/rest/v1/expedientes?select=*&and=({conditions})&limit=5"
+        full_url = f"{SUPABASE_URL}/rest/v1/expedientes?select={select}&and=({conditions})&limit=5"
 
     try:
         async with httpx.AsyncClient(timeout=10.0) as client:
@@ -46,7 +52,6 @@ async def buscar_caso(nombre: str) -> str:
     except Exception as e:
         return json.dumps({
             "error": f"No se pudo conectar a Supabase: {type(e).__name__}: {str(e)}",
-            "url_used": full_url[:60] + "...",
         })
 
     if response.status_code != 200:
@@ -65,47 +70,17 @@ async def buscar_caso(nombre: str) -> str:
 
     casos = []
     for r in resultados:
-        caso = {
+        casos.append({
+            "expediente_id": r.get("id", ""),
             "caratula": r.get("caratula", ""),
             "estado": r.get("estado", "Sin estado registrado"),
-        }
-        if r.get("juzgado"):
-            caso["juzgado"] = r["juzgado"]
-        if r.get("expediente_nro"):
-            caso["expediente_nro"] = r["expediente_nro"]
-        if r.get("fecha_inicio"):
-            caso["fecha_inicio"] = r["fecha_inicio"]
-        casos.append(caso)
+        })
 
     return json.dumps({
         "cantidad_resultados": len(casos),
         "casos": casos,
     }, ensure_ascii=False)
 
-
-@mcp.tool()
-async def debug_config() -> str:
-    """Muestra si las variables de entorno estan configuradas y prueba la conexion a Supabase."""
-    result = {
-        "SUPABASE_URL_configured": bool(SUPABASE_URL),
-        "SUPABASE_URL_preview": SUPABASE_URL[:50] + "..." if SUPABASE_URL else "(empty)",
-        "SUPABASE_URL_length": len(SUPABASE_URL),
-        "SUPABASE_URL_repr": repr(SUPABASE_URL[:50]),
-        "SUPABASE_KEY_configured": bool(SUPABASE_KEY),
-        "PORT": PORT,
-    }
-    # Probar conexion a Supabase
-    if SUPABASE_URL:
-        try:
-            async with httpx.AsyncClient(timeout=5.0) as client:
-                resp = await client.get(f"{SUPABASE_URL}/rest/v1/", headers={
-                    "apikey": SUPABASE_KEY,
-                    "Authorization": f"Bearer {SUPABASE_KEY}",
-                })
-                result["supabase_connection"] = f"OK - status {resp.status_code}"
-        except Exception as e:
-            result["supabase_connection"] = f"FAILED - {type(e).__name__}: {str(e)}"
-    return json.dumps(result)
 
 
 if __name__ == "__main__":
