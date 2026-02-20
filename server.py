@@ -9,7 +9,7 @@ SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "").strip()
 PORT = int(os.environ.get("PORT", 8000))
 
 # --- MCP Server ---
-mcp = FastMCP("Expedientes Legales")
+mcp = FastMCP("Expedientes Legales", stateless_http=True, json_response=True)
 
 
 @mcp.tool()
@@ -84,4 +84,4 @@ async def buscar_caso(nombre: str) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="http", host="0.0.0.0", port=PORT, path="/mcp")
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=PORT, path="/mcp")
