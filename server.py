@@ -2,9 +2,11 @@ import os
 import json
 import httpx
 from fastmcp import FastMCP
-from fastmcp.server.auth import BearerTokenAuth
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
+from starlette.responses import JSONResponse
 
 # --- Config ---
 SUPABASE_URL = os.environ["SUPABASE_URL"]
@@ -12,14 +14,24 @@ SUPABASE_KEY = os.environ["SUPABASE_KEY"]
 MCP_AUTH_TOKEN = os.environ["MCP_AUTH_TOKEN"]
 PORT = int(os.environ.get("PORT", 8000))
 
-# --- Auth ---
-auth = BearerTokenAuth(token=MCP_AUTH_TOKEN)
+
+# --- Auth middleware manual ---
+class AuthMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        # Permitir OPTIONS para CORS preflight
+        if request.method == "OPTIONS":
+            return await call_next(request)
+
+        auth_header = request.headers.get("authorization", "")
+        if auth_header != f"Bearer {MCP_AUTH_TOKEN}":
+            return JSONResponse({"error": "Unauthorized"}, status_code=401)
+        return await call_next(request)
+
 
 # --- MCP Server ---
 mcp = FastMCP(
     "Expedientes Legales",
     instructions="Server MCP para buscar el estado de expedientes legales en un estudio de abogados laborales.",
-    auth=auth,
 )
 
 
@@ -44,7 +56,7 @@ async def buscar_caso(nombre: str) -> str:
         "Authorization": f"Bearer {SUPABASE_KEY}",
     }
 
-    # Construir query: si es una palabra, filtro directo; si son varias, usar AND
+    # Construir query con filtro AND
     if len(filters) == 1:
         full_url = f"{url}?select=*&caratula=ilike.%25{palabras[0]}%25&limit=5"
     else:
@@ -88,19 +100,20 @@ async def buscar_caso(nombre: str) -> str:
     }, ensure_ascii=False)
 
 
-# --- CORS middleware para OpenAI ---
-cors_middleware = [
-    Middleware(
-        CORSMiddleware,
-        allow_origins=["*"],
-        allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
-        allow_headers=["*"],
-        expose_headers=["mcp-session-id"],
-    )
-]
-
-# --- ASGI app (para produccion con uvicorn) ---
-app = mcp.http_app(path="/mcp", middleware=cors_middleware)
+# --- ASGI app con CORS y Auth ---
+app = mcp.http_app(
+    path="/mcp",
+    middleware=[
+        Middleware(
+            CORSMiddleware,
+            allow_origins=["*"],
+            allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+            allow_headers=["*"],
+            expose_headers=["mcp-session-id"],
+        ),
+        Middleware(AuthMiddleware),
+    ],
+)
 
 if __name__ == "__main__":
     import uvicorn
