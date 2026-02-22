@@ -116,6 +116,36 @@ def traducir_movimiento(tipo: str, descripcion: str, es_srt: bool = False) -> st
         return "Trámite de sentencia"
     if "demanda" in tip:
         return "Trámite de demanda"
+    if "pase a" in tip or "pase al" in tip:
+        return "Pase del expediente"
+    if "manifestacion" in tip or "manifestación" in tip:
+        return "Escrito presentado"
+    if "documentacion" in tip or "documentación" in tip or "acompaña" in tip:
+        return "Documentación presentada"
+    if "receptoria" in tip or "receptoría" in tip or "oficio" in tip:
+        return "Oficio recibido"
+    if "notificacion" in tip or "notificación" in tip or "cedula" in tip or "cédula" in tip:
+        return "Notificación judicial"
+    if "acta" in tip:
+        return "Acta labrada"
+    if "contestacion" in tip or "contestación" in tip:
+        return "Contestación presentada"
+    if "informe" in tip:
+        return "Informe recibido"
+    if "ofrecimiento" in tip or "ofrece" in tip:
+        return "Ofrecimiento de prueba"
+    if "recurso" in tip or "apela" in tip:
+        return "Recurso presentado"
+    if "resolucion" in tip or "resolución" in tip:
+        return "Resolución del juzgado"
+    if "vista" in tip:
+        return "Vista conferida"
+    if "perit" in tip:
+        return "Trámite de pericia"
+    if "testimonial" in tip or "testigo" in tip:
+        return "Prueba testimonial"
+    if "incompetencia" in tip or "inhibitoria" in tip:
+        return "Cuestión de competencia"
 
     # Fallbacks SRT
     if "citacion" in ambos or "citación" in ambos:
