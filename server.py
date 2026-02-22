@@ -813,7 +813,11 @@ async def obtener_y_generar_movimientos(
         elif not filtrados or filtrados[-1].get("descripcion") != item["descripcion"]:
             filtrados.append(item)
 
-    return filtrados[:20]
+    # Quitar tipo_entrada del output (es interno, el cliente no debe verlo)
+    resultado = []
+    for item in filtrados[:20]:
+        resultado.append({"fecha": item["fecha"], "descripcion": item["descripcion"]})
+    return resultado
 
 
 def limpiar_caratula(caratula: str) -> str:
