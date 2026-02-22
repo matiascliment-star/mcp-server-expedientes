@@ -115,6 +115,12 @@ def traducir_movimiento(tipo: str, descripcion: str, es_srt: bool = False) -> st
         return "Gestión de representación"
 
     texto = (descripcion or tipo or "Trámite").replace("honorarios", "costas").replace("Honorarios", "Costas")
+
+    # Si el texto es solo una fecha (dd/mm/yyyy o yyyy-mm-dd), reemplazar por texto genérico
+    texto_strip = texto.strip()
+    if re.match(r"^\d{1,2}/\d{1,2}/\d{2,4}$", texto_strip) or re.match(r"^\d{4}-\d{2}-\d{2}", texto_strip):
+        return "Trámite procesal"
+
     return texto[:50] if len(texto) > 50 else texto
 
 
