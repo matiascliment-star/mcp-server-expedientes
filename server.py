@@ -769,6 +769,20 @@ async def obtener_y_generar_movimientos(
     return filtrados[:20]
 
 
+def limpiar_caratula(caratula: str) -> str:
+    """Elimina números de expediente, juzgado y datos internos de la carátula."""
+    if not caratula:
+        return caratula
+    # Eliminar número de expediente (ej: "- 44636/2019", "- 12345/2020", "NRO 44636/2019")
+    limpia = re.sub(r"\s*-?\s*(?:NRO\.?\s*)?\d{3,6}\s*/\s*\d{2,4}", "", caratula)
+    # Eliminar referencias a juzgado (ej: "JUZGADO NRO 5", "JDO. 12")
+    limpia = re.sub(r"\s*-?\s*(?:JUZGADO|JDO\.?|TRIBUNAL|TRIB\.?)\s*(?:NRO\.?\s*)?\d+", "", limpia, flags=re.IGNORECASE)
+    # Limpiar espacios extra y guiones sueltos al final
+    limpia = re.sub(r"\s*-\s*$", "", limpia).strip()
+    limpia = re.sub(r"\s{2,}", " ", limpia)
+    return limpia
+
+
 # ============================================================
 # TOOLS MCP
 # ============================================================
@@ -827,7 +841,7 @@ async def buscar_caso(nombre: str) -> str:
     for r in resultados:
         casos.append({
             "expediente_id": r.get("id", ""),
-            "caratula": r.get("caratula", ""),
+            "caratula": limpiar_caratula(r.get("caratula", "")),
             "estado": r.get("estado", "Sin estado registrado"),
         })
 
