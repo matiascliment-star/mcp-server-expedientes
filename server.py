@@ -677,8 +677,8 @@ async def obtener_y_generar_movimientos(
     nuevos_generados = []
     hoy = datetime.now()
 
-    # Hueco desde último movimiento hasta hoy (>12 días)
     if movs_reales:
+        # Hueco desde último movimiento hasta hoy (>12 días)
         try:
             ultima_fecha = datetime.strptime(movs_reales[0]["fecha"], "%Y-%m-%d")
             dias_desde_ultimo = (hoy - ultima_fecha).days
@@ -691,20 +691,28 @@ async def obtener_y_generar_movimientos(
         except ValueError:
             pass
 
-    # Huecos entre movimientos reales (>30 días)
-    for i in range(len(movs_reales) - 1):
-        try:
-            fecha_actual = datetime.strptime(movs_reales[i]["fecha"], "%Y-%m-%d")
-            fecha_anterior = datetime.strptime(movs_reales[i + 1]["fecha"], "%Y-%m-%d")
-            dias_entre = (fecha_actual - fecha_anterior).days
-            if dias_entre > 30:
-                nuevos = generar_seguimientos_para_rango(
-                    fecha_anterior, fecha_actual, caso_id, fechas_existentes, tipos_usados,
-                    estado_compartido, etapa, es_srt, es_despido, estado_str,
-                )
-                nuevos_generados.extend(nuevos)
-        except ValueError:
-            pass
+        # Huecos entre movimientos reales (>30 días)
+        for i in range(len(movs_reales) - 1):
+            try:
+                fecha_actual = datetime.strptime(movs_reales[i]["fecha"], "%Y-%m-%d")
+                fecha_anterior = datetime.strptime(movs_reales[i + 1]["fecha"], "%Y-%m-%d")
+                dias_entre = (fecha_actual - fecha_anterior).days
+                if dias_entre > 30:
+                    nuevos = generar_seguimientos_para_rango(
+                        fecha_anterior, fecha_actual, caso_id, fechas_existentes, tipos_usados,
+                        estado_compartido, etapa, es_srt, es_despido, estado_str,
+                    )
+                    nuevos_generados.extend(nuevos)
+            except ValueError:
+                pass
+    elif not segs_guardados:
+        # Sin movimientos reales NI seguimientos guardados: generar para los últimos 90 días
+        fecha_inicio = hoy - timedelta(days=90)
+        nuevos = generar_seguimientos_para_rango(
+            fecha_inicio, hoy, caso_id, fechas_existentes, tipos_usados,
+            estado_compartido, etapa, es_srt, es_despido, estado_str,
+        )
+        nuevos_generados.extend(nuevos)
 
     # --- Guardar nuevos en Supabase (fire & forget) ---
     if nuevos_generados:
