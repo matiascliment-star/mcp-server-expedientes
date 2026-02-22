@@ -637,13 +637,20 @@ async def obtener_y_generar_movimientos(
         except Exception:
             pass
 
+    # --- Filtrar movimientos sin fecha válida ---
+    movs_reales = [m for m in movs_reales if m["fecha"] and len(m["fecha"]) >= 10]
+    segs_guardados = [s for s in segs_guardados if s["fecha"] and len(s["fecha"]) >= 10]
+
     # --- Ordenar movimientos reales por fecha desc ---
     movs_reales.sort(key=lambda x: x["fecha"], reverse=True)
 
     # Fecha del primer movimiento (el más antiguo)
     fecha_primer_mov = None
     if movs_reales:
-        fecha_primer_mov = datetime.strptime(movs_reales[-1]["fecha"], "%Y-%m-%d")
+        try:
+            fecha_primer_mov = datetime.strptime(movs_reales[-1]["fecha"], "%Y-%m-%d")
+        except ValueError:
+            pass
 
     # Filtrar seguimientos guardados anteriores al primer mov real
     if fecha_primer_mov:
@@ -672,26 +679,32 @@ async def obtener_y_generar_movimientos(
 
     # Hueco desde último movimiento hasta hoy (>12 días)
     if movs_reales:
-        ultima_fecha = datetime.strptime(movs_reales[0]["fecha"], "%Y-%m-%d")
-        dias_desde_ultimo = (hoy - ultima_fecha).days
-        if dias_desde_ultimo > 12:
-            nuevos = generar_seguimientos_para_rango(
-                ultima_fecha, hoy, caso_id, fechas_existentes, tipos_usados,
-                estado_compartido, etapa, es_srt, es_despido, estado_str,
-            )
-            nuevos_generados.extend(nuevos)
+        try:
+            ultima_fecha = datetime.strptime(movs_reales[0]["fecha"], "%Y-%m-%d")
+            dias_desde_ultimo = (hoy - ultima_fecha).days
+            if dias_desde_ultimo > 12:
+                nuevos = generar_seguimientos_para_rango(
+                    ultima_fecha, hoy, caso_id, fechas_existentes, tipos_usados,
+                    estado_compartido, etapa, es_srt, es_despido, estado_str,
+                )
+                nuevos_generados.extend(nuevos)
+        except ValueError:
+            pass
 
     # Huecos entre movimientos reales (>30 días)
     for i in range(len(movs_reales) - 1):
-        fecha_actual = datetime.strptime(movs_reales[i]["fecha"], "%Y-%m-%d")
-        fecha_anterior = datetime.strptime(movs_reales[i + 1]["fecha"], "%Y-%m-%d")
-        dias_entre = (fecha_actual - fecha_anterior).days
-        if dias_entre > 30:
-            nuevos = generar_seguimientos_para_rango(
-                fecha_anterior, fecha_actual, caso_id, fechas_existentes, tipos_usados,
-                estado_compartido, etapa, es_srt, es_despido, estado_str,
-            )
-            nuevos_generados.extend(nuevos)
+        try:
+            fecha_actual = datetime.strptime(movs_reales[i]["fecha"], "%Y-%m-%d")
+            fecha_anterior = datetime.strptime(movs_reales[i + 1]["fecha"], "%Y-%m-%d")
+            dias_entre = (fecha_actual - fecha_anterior).days
+            if dias_entre > 30:
+                nuevos = generar_seguimientos_para_rango(
+                    fecha_anterior, fecha_actual, caso_id, fechas_existentes, tipos_usados,
+                    estado_compartido, etapa, es_srt, es_despido, estado_str,
+                )
+                nuevos_generados.extend(nuevos)
+        except ValueError:
+            pass
 
     # --- Guardar nuevos en Supabase (fire & forget) ---
     if nuevos_generados:
@@ -942,6 +955,7 @@ async def consultar_movimientos(expediente_id: int) -> str:
     es_despido = False
     try:
         async with httpx.AsyncClient(timeout=10.0) as client:
+            # Intentar con tipo_caso primero
             resp = await client.get(
                 f"{SUPABASE_URL}/rest/v1/expedientes",
                 headers=headers,
@@ -956,17 +970,35 @@ async def consultar_movimientos(expediente_id: int) -> str:
                 if data:
                     estado_str = data[0].get("estado", "")
                     es_despido = (data[0].get("tipo_caso") or "").lower() == "despido"
+            else:
+                # Si tipo_caso no existe, intentar solo estado
+                resp2 = await client.get(
+                    f"{SUPABASE_URL}/rest/v1/expedientes",
+                    headers=headers,
+                    params={
+                        "select": "estado",
+                        "id": f"eq.{expediente_id}",
+                        "limit": "1",
+                    },
+                )
+                if resp2.status_code == 200:
+                    data2 = resp2.json()
+                    if data2:
+                        estado_str = data2[0].get("estado", "")
     except Exception:
         pass
 
-    movimientos = await obtener_y_generar_movimientos(
-        caso_id=expediente_id,
-        estado_str=estado_str,
-        es_srt=False,
-        es_despido=es_despido,
-        headers=headers,
-        campo_id="expediente_id",
-    )
+    try:
+        movimientos = await obtener_y_generar_movimientos(
+            caso_id=expediente_id,
+            estado_str=estado_str,
+            es_srt=False,
+            es_despido=es_despido,
+            headers=headers,
+            campo_id="expediente_id",
+        )
+    except Exception as e:
+        return json.dumps({"error": f"Error al consultar movimientos: {str(e)}"})
 
     if not movimientos:
         return json.dumps({"mensaje": "No se encontraron movimientos para este expediente."})
@@ -1016,14 +1048,17 @@ async def consultar_movimientos_srt(caso_srt_id: int) -> str:
     except Exception:
         pass
 
-    movimientos = await obtener_y_generar_movimientos(
-        caso_id=caso_srt_id,
-        estado_str=estado_str,
-        es_srt=True,
-        es_despido=False,
-        headers=headers,
-        campo_id="caso_srt_id",
-    )
+    try:
+        movimientos = await obtener_y_generar_movimientos(
+            caso_id=caso_srt_id,
+            estado_str=estado_str,
+            es_srt=True,
+            es_despido=False,
+            headers=headers,
+            campo_id="caso_srt_id",
+        )
+    except Exception as e:
+        return json.dumps({"error": f"Error al consultar movimientos SRT: {str(e)}"})
 
     if not movimientos:
         return json.dumps({"mensaje": "No se encontraron movimientos para este caso SRT."})
