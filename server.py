@@ -23,100 +23,147 @@ def traducir_movimiento(tipo: str, descripcion: str, es_srt: bool = False) -> st
     desc = (descripcion or "").lower()
     tip = (tipo or "").lower()
 
+    # Para MEV: si descripcion es solo una fecha, usar tipo como texto principal
+    es_fecha_desc = bool(re.match(r"^\d{1,2}/\d{1,2}/\d{2,4}$", desc.strip())) or bool(re.match(r"^\d{4}-\d{2}-\d{2}$", desc.strip()))
+    # Combinar ambos campos para búsqueda de keywords
+    ambos = f"{tip} {desc}"
+
     es_escrito = "escrito" in tip
     es_despacho = "despacho" in tip
     es_mov = "movimiento" in tip
-    es_cedula = "cedula" in tip or "cédula" in tip or desc.startswith("cédula")
+    es_cedula = "cedula" in tip or "cédula" in tip or desc.startswith("cédula") or "cedula" in desc
     es_evento = "evento" in tip
 
     if es_cedula:
         return "Notificación" if es_srt else "Notificación judicial"
-    if "honorario" in desc:
-        return "Regulación de costas" if "regul" in desc else "Resolución del juzgado"
+    if "honorario" in ambos:
+        return "Regulación de costas" if "regul" in ambos else "Resolución del juzgado"
     if es_despacho:
-        if "sentencia" in desc and "dicte" not in desc:
+        if "sentencia" in ambos and "dicte" not in ambos:
             return "Trámite de sentencia"
-        if "alegar" in desc or "alegato" in desc:
+        if "alegar" in ambos or "alegato" in ambos:
             return "Juzgado habilitó alegatos"
-        if "apertura" in desc or "abre a prueba" in desc:
+        if "apertura" in ambos or "abre a prueba" in ambos:
             return "Juzgado abrió a prueba"
-        if "traslado" in desc:
+        if "traslado" in ambos:
             return "Juzgado ordenó traslado"
-        if "perit" in desc or "sorteo" in desc:
+        if "perit" in ambos or "sorteo" in ambos:
             return "Resolución sobre pericia"
-        if "intim" in desc:
+        if "intim" in ambos:
             return "Intimación del juzgado"
-        if "sin perjuicio" in desc or "agreg" in desc:
+        if "sin perjuicio" in ambos or "agreg" in ambos:
             return "Proveído del juzgado"
         return "Resolución del juzgado"
     if es_escrito:
-        if "apela" in desc or "recurso" in desc:
+        if "apela" in ambos or "recurso" in ambos:
             return "Recurso presentado"
-        if "alegato" in desc:
+        if "alegato" in ambos:
             return "Trámite de alegato"
-        if "pericia" in desc or "informe pericial" in desc:
+        if "pericia" in ambos or "informe pericial" in ambos:
             return "Trámite de pericia"
-        if "contesta" in desc and "demanda" in desc:
+        if "contesta" in ambos and "demanda" in ambos:
             return "Contestación de demanda"
-        if "demanda" in desc and "contesta" not in desc:
+        if "demanda" in ambos and "contesta" not in ambos:
             return "Demanda presentada"
-        if "ofrec" in desc and "prueba" in desc:
+        if "ofrec" in ambos and "prueba" in ambos:
             return "Ofrecimiento de prueba"
-        if "solicita" in desc or "pide" in desc or "insiste" in desc:
+        if "solicita" in ambos or "pide" in ambos or "insiste" in ambos:
             return "Escrito presentado"
         return "Escrito presentado"
     if es_mov:
-        if "en letra" in desc:
+        if "en letra" in ambos:
             return "Expediente en letra"
-        if "en despacho" in desc:
+        if "en despacho" in ambos:
             return "Expediente en despacho"
-        if "alegar" in desc:
+        if "alegar" in ambos:
             return "Pase a alegar"
-        if "archivo" in desc or "paralizad" in desc:
+        if "archivo" in ambos or "paralizad" in ambos:
             return "Expediente archivado"
         return "Movimiento del expediente"
     if es_evento:
-        return "Notificación" if "notificacion" in desc else "Evento procesal"
+        return "Notificación" if "notificacion" in ambos else "Evento procesal"
+
+    # --- MEV: tipo tiene la info real (ej: "IMPUGNACION - TRASLADO / SE PROVEE") ---
+    if "presentacion" in tip or "recibida" in tip:
+        return "Escrito presentado"
+    if "impugna" in tip and "pericia" in tip:
+        return "Impugnación de pericia"
+    if "impugna" in tip and "dictamen" in tip:
+        return "Impugnación de dictamen"
+    if "impugna" in tip:
+        if "traslado" in tip:
+            return "Traslado de impugnación"
+        return "Impugnación presentada"
+    if "prueba pericial" in tip:
+        return "Resolución sobre pericia"
+    if "provee" in tip and "traslado" in tip:
+        return "Juzgado ordenó traslado"
+    if "provee" in tip:
+        return "Proveído del juzgado"
+    if "auto" in tip and "interlocutorio" in tip:
+        return "Resolución del juzgado"
+    if "regulacion" in tip or "regulación" in tip:
+        return "Regulación de costas"
+    if "sorteo" in tip:
+        return "Sorteo realizado"
+    if "audiencia" in tip:
+        return "Audiencia fijada"
+    if "embargo" in tip:
+        return "Trámite de embargo"
+    if "liquidacion" in tip or "liquidación" in tip:
+        return "Trámite de liquidación"
+    if "sentencia" in tip:
+        return "Trámite de sentencia"
+    if "demanda" in tip:
+        return "Trámite de demanda"
 
     # Fallbacks SRT
-    if "citacion" in desc or "citación" in desc:
+    if "citacion" in ambos or "citación" in ambos:
         return "Se programó una citación"
-    if "audiencia virtual" in desc:
+    if "audiencia virtual" in ambos:
         return "Audiencia virtual realizada"
-    if "audiencia" in desc:
+    if "audiencia" in ambos:
         return "Se realizó una audiencia"
-    if "dictamen" in desc and "medico" in desc:
+    if "dictamen" in ambos and "medico" in ambos:
         return "Se emitió dictamen médico"
-    if "homolog" in desc:
+    if "homolog" in ambos:
         return "Se homologó el acuerdo"
-    if "acuerdo" in desc or "concilia" in desc:
+    if "acuerdo" in ambos or "concilia" in ambos:
         return "Negociación de acuerdo"
-    if "historia clinica" in desc or "hc solicit" in desc:
+    if "historia clinica" in ambos or "hc solicit" in ambos:
         return "Se solicitó historia clínica"
-    if "itm" in desc or "incapacidad" in desc:
+    if "itm" in ambos or "incapacidad" in ambos:
         return "Determinación de incapacidad"
 
-    # Otros fallbacks
-    if "notifica" in desc or "cédula" in desc or "cedula" in desc:
+    # Otros fallbacks (buscar en ambos campos)
+    if "notifica" in ambos or "cédula" in ambos or "cedula" in ambos:
         return "Notificación" if es_srt else "Notificación judicial"
-    if "sentencia" in desc or "fallo" in desc:
+    if "sentencia" in ambos or "fallo" in ambos:
         return "Trámite de sentencia"
-    if "pericia" in desc or "perito" in desc:
+    if "pericia" in ambos or "perito" in ambos or "pericial" in ambos:
         return "Trámite de pericia"
-    if "alegato" in desc or "alegar" in desc:
+    if "alegato" in ambos or "alegar" in ambos:
         return "Trámite de alegatos"
-    if "apela" in desc or "recurso" in desc:
+    if "apela" in ambos or "recurso" in ambos:
         return "Recurso presentado"
-    if "elev" in desc or "remit" in desc:
+    if "elev" in ambos or "remit" in ambos:
         return "Expediente elevado"
-    if "deposito" in desc or "pago" in desc or "embargo" in desc:
+    if "deposito" in ambos or "pago" in ambos or "embargo" in ambos:
         return "Movimiento de cobro"
-    if "poder" in desc or "apoderado" in desc:
+    if "poder" in ambos or "apoderado" in ambos:
         return "Gestión de representación"
+    if "prueba" in ambos:
+        return "Trámite de prueba"
+    if "traslado" in ambos:
+        return "Juzgado ordenó traslado"
+    if "intim" in ambos:
+        return "Intimación del juzgado"
 
-    texto = (descripcion or tipo or "Trámite").replace("honorarios", "costas").replace("Honorarios", "Costas")
+    # Fallback final: preferir tipo sobre descripcion si descripcion es fecha
+    texto = (tipo or descripcion or "Trámite") if es_fecha_desc else (descripcion or tipo or "Trámite")
+    texto = texto.replace("honorarios", "costas").replace("Honorarios", "Costas")
 
-    # Si el texto es solo una fecha (dd/mm/yyyy o yyyy-mm-dd), reemplazar por texto genérico
+    # Si el texto sigue siendo solo una fecha, reemplazar por texto genérico
     texto_strip = texto.strip()
     if re.match(r"^\d{1,2}/\d{1,2}/\d{2,4}$", texto_strip) or re.match(r"^\d{4}-\d{2}-\d{2}", texto_strip):
         return "Trámite procesal"
