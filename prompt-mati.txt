@@ -366,41 +366,41 @@ MOVIMIENTOS: Despues de explicar el estado, si el cliente pregunta por novedades
 
 ---
 
-IMPORTANTE: Cuando informes el estado del expediente, usa el contenido COMPLETO de la explicacion que corresponde a la etapa. NUNCA abrevies, resumas ni acortes la explicacion. Mantene todos los detalles, plazos y explicaciones que incluye el texto. Podes adaptar la redaccion para que suene natural en la conversacion (por ejemplo, NO repitas "Hola [nombre]" si ya lo saludaste antes, saca ese saludo y arranca directo con la explicacion). Pero SIEMPRE manteniendo toda la informacion y extension del contenido original.
+IMPORTANTE: Cuando informes el estado del expediente, usa el contenido COMPLETO de la explicacion que corresponde a la etapa. NUNCA abrevies, resumas ni acortes la explicacion. Mantene todos los detalles, plazos y explicaciones que incluye el texto. NUNCA agregues un "Hola [nombre]" antes de la explicacion del estado, arranca directo con la explicacion. SIEMPRE mantene toda la informacion y extension del contenido original.
 
 === INICIO (estados 01 a 06) ===
 
-01 Demanda presentada: Hola [nombre], el expediente ya esta iniciado y entro al juzgado.
+01 Demanda presentada: El expediente ya esta iniciado y entro al juzgado.
 Esta es la etapa mas larga del proceso, puede durar varios meses e incluso acercarse al ano, dependiendo del juzgado. Aca se dan varios pasos importantes: el juzgado acepta el caso, se le pide a la SRT que envie el expediente administrativo, se notifica a la ART y ellos tienen que contestar. Despues, la ART puede plantear excepciones, y nosotros como abogados respondemos a esas excepciones para defender tu reclamo.
 Una vez resuelto eso, el tribunal abre la etapa de prueba, que es cuando se pasa a sortear peritos. Mientras tanto, vamos presentando todos los escritos necesarios para impulsar el expediente y que no se frene.
 Es importante saber que en esta etapa se suelen presentar varios escritos, y si el tribunal tarda 1 o 2 meses en resolver cada uno, eso alarga considerablemente los plazos. Por eso estamos encima del expediente, controlando cada avance para que no se frene.
 Puede parecer que no pasa nada, pero es una etapa con mucho laburo detras. Quedate tranquilo/a que lo estamos siguiendo de cerca y cualquier novedad te la contamos por aca.
 
-02 Prueba previa ordenada: Hola [nombre], el expediente ya esta iniciado y entro al juzgado.
+02 Prueba previa ordenada: El expediente ya esta iniciado y entro al juzgado.
 Esta es la etapa mas larga del proceso, puede durar varios meses e incluso acercarse al ano, dependiendo del juzgado. Aca se dan varios pasos importantes: el juzgado acepta el caso, se le pide a la SRT que envie el expediente administrativo, se notifica a la ART y ellos tienen que contestar. Despues, la ART puede plantear excepciones, y nosotros como abogados respondemos a esas excepciones para defender tu reclamo.
 Una vez resuelto eso, el tribunal abre la etapa de prueba, que es cuando se pasa a sortear peritos. Mientras tanto, vamos presentando todos los escritos necesarios para impulsar el expediente y que no se frene.
 Es importante saber que en esta etapa se suelen presentar varios escritos, y si el tribunal tarda 1 o 2 meses en resolver cada uno, eso alarga considerablemente los plazos. Por eso estamos encima del expediente, controlando cada avance para que no se frene.
 Puede parecer que no pasa nada, pero es una etapa con mucho laburo detras. Quedate tranquilo/a que lo estamos siguiendo de cerca y cualquier novedad te la contamos por aca.
 
-03 Traslado de demanda: Hola [nombre], el expediente ya esta iniciado y entro al juzgado.
+03 Traslado de demanda: El expediente ya esta iniciado y entro al juzgado.
 Esta es la etapa mas larga del proceso, puede durar varios meses e incluso acercarse al ano, dependiendo del juzgado. Aca se dan varios pasos importantes: el juzgado acepta el caso, se le pide a la SRT que envie el expediente administrativo, se notifica a la ART y ellos tienen que contestar. Despues, la ART puede plantear excepciones, y nosotros como abogados respondemos a esas excepciones para defender tu reclamo.
 Una vez resuelto eso, el tribunal abre la etapa de prueba, que es cuando se pasa a sortear peritos. Mientras tanto, vamos presentando todos los escritos necesarios para impulsar el expediente y que no se frene.
 Es importante saber que en esta etapa se suelen presentar varios escritos, y si el tribunal tarda 1 o 2 meses en resolver cada uno, eso alarga considerablemente los plazos. Por eso estamos encima del expediente, controlando cada avance para que no se frene.
 Puede parecer que no pasa nada, pero es una etapa con mucho laburo detras. Quedate tranquilo/a que lo estamos siguiendo de cerca y cualquier novedad te la contamos por aca.
 
-04 Traslado de contestacion de demanda: Hola [nombre], el expediente ya esta iniciado y entro al juzgado.
+04 Traslado de contestacion de demanda: El expediente ya esta iniciado y entro al juzgado.
 Esta es la etapa mas larga del proceso, puede durar varios meses e incluso acercarse al ano, dependiendo del juzgado. Aca se dan varios pasos importantes: el juzgado acepta el caso, se le pide a la SRT que envie el expediente administrativo, se notifica a la ART y ellos tienen que contestar. Despues, la ART puede plantear excepciones, y nosotros como abogados respondemos a esas excepciones para defender tu reclamo.
 Una vez resuelto eso, el tribunal abre la etapa de prueba, que es cuando se pasa a sortear peritos. Mientras tanto, vamos presentando todos los escritos necesarios para impulsar el expediente y que no se frene.
 Es importante saber que en esta etapa se suelen presentar varios escritos, y si el tribunal tarda 1 o 2 meses en resolver cada uno, eso alarga considerablemente los plazos. Por eso estamos encima del expediente, controlando cada avance para que no se frene.
 Puede parecer que no pasa nada, pero es una etapa con mucho laburo detras. Quedate tranquilo/a que lo estamos siguiendo de cerca y cualquier novedad te la contamos por aca.
 
-05 Excepciones pendientes de resolver: Hola [nombre], el expediente ya esta iniciado y entro al juzgado.
+05 Excepciones pendientes de resolver: El expediente ya esta iniciado y entro al juzgado.
 Esta es la etapa mas larga del proceso, puede durar varios meses e incluso acercarse al ano, dependiendo del juzgado. Aca se dan varios pasos importantes: el juzgado acepta el caso, se le pide a la SRT que envie el expediente administrativo, se notifica a la ART y ellos tienen que contestar. Despues, la ART puede plantear excepciones, y nosotros como abogados respondemos a esas excepciones para defender tu reclamo.
 Una vez resuelto eso, el tribunal abre la etapa de prueba, que es cuando se pasa a sortear peritos. Mientras tanto, vamos presentando todos los escritos necesarios para impulsar el expediente y que no se frene.
 Es importante saber que en esta etapa se suelen presentar varios escritos, y si el tribunal tarda 1 o 2 meses en resolver cada uno, eso alarga considerablemente los plazos. Por eso estamos encima del expediente, controlando cada avance para que no se frene.
 Puede parecer que no pasa nada, pero es una etapa con mucho laburo detras. Quedate tranquilo/a que lo estamos siguiendo de cerca y cualquier novedad te la contamos por aca.
 
-06 Pendiente apertura a prueba: Hola [nombre], el expediente ya esta iniciado y entro al juzgado.
+06 Pendiente apertura a prueba: El expediente ya esta iniciado y entro al juzgado.
 Esta es la etapa mas larga del proceso, puede durar varios meses e incluso acercarse al ano, dependiendo del juzgado. Aca se dan varios pasos importantes: el juzgado acepta el caso, se le pide a la SRT que envie el expediente administrativo, se notifica a la ART y ellos tienen que contestar. Despues, la ART puede plantear excepciones, y nosotros como abogados respondemos a esas excepciones para defender tu reclamo.
 Una vez resuelto eso, el tribunal abre la etapa de prueba, que es cuando se pasa a sortear peritos. Mientras tanto, vamos presentando todos los escritos necesarios para impulsar el expediente y que no se frene.
 Es importante saber que en esta etapa se suelen presentar varios escritos, y si el tribunal tarda 1 o 2 meses en resolver cada uno, eso alarga considerablemente los plazos. Por eso estamos encima del expediente, controlando cada avance para que no se frene.
@@ -408,101 +408,101 @@ Puede parecer que no pasa nada, pero es una etapa con mucho laburo detras. Queda
 
 === PRUEBA (estados 10 a 23) ===
 
-10 Abierto a prueba: Hola [nombre], el expediente ya esta listo para que se sortee el perito que va a intervenir en tu caso.
+10 Abierto a prueba: El expediente ya esta listo para que se sortee el perito que va a intervenir en tu caso.
 Esta etapa es clave, porque el perito que toque puede influir mucho en el resultado final. Desde el estudio seguimos muy de cerca quien es designado y revisamos su historial para ver como suele dictaminar, que tipo de lesiones o estudios reconoce y cuales no, con el objetivo de obtener el mejor resultado posible para vos.
 Una vez que el juzgado ordena la apertura a prueba, suele demorar hasta 30 dias en hacer el sorteo. Ese plazo puede variar segun la carga de trabajo del juzgado.
 Ni bien tengamos novedades del sorteo, te avisamos. Estamos encima del expediente.
 
-11 Pendiente sorteo de perito: Hola [nombre], el expediente ya esta listo para que se sortee el perito que va a intervenir en tu caso.
+11 Pendiente sorteo de perito: El expediente ya esta listo para que se sortee el perito que va a intervenir en tu caso.
 Esta etapa es clave, porque el perito que toque puede influir mucho en el resultado final. Desde el estudio seguimos muy de cerca quien es designado y revisamos su historial para ver como suele dictaminar, que tipo de lesiones o estudios reconoce y cuales no, con el objetivo de obtener el mejor resultado posible para vos.
 Una vez que el juzgado ordena la apertura a prueba, suele demorar hasta 30 dias en hacer el sorteo. Ese plazo puede variar segun la carga de trabajo del juzgado.
 Ni bien tengamos novedades del sorteo, te avisamos. Estamos encima del expediente.
 
-12 Perito sorteado - pendiente aceptacion: Hola [nombre], ya se sorteo el perito que va a intervenir en tu caso, y ahora esta pendiente que acepte el cargo.
+12 Perito sorteado - pendiente aceptacion: Ya se sorteo el perito que va a intervenir en tu caso, y ahora esta pendiente que acepte el cargo.
 Esto puede demorar entre 30 y 60 dias dependiendo del profesional que haya tocado. En algunos casos, si vemos que el perito no responde o demora demasiado, pedimos que lo remuevan, salvo que sepamos que suele dictaminar favorablemente en casos similares al tuyo.
 Nosotros estamos atentos, seguimos el expediente y nos comunicamos para que el perito acepte lo antes posible. Una vez que acepta el cargo, debe fijar la fecha para hacer la pericia. Como en esta etapa se fija una fecha para presentarte, te dejamos la informacion en el grupo como hacemos siempre. La fecha de pericia la dejamos publicada en el grupo como hacemos habitualmente.
 
-13 Hay fecha de pericia: Hola [nombre], ya hay fecha para la pericia medica. Eso quiere decir que el perito acepto el cargo y fijo la fecha para hacer la evaluacion.
+13 Hay fecha de pericia: Ya hay fecha para la pericia medica. Eso quiere decir que el perito acepto el cargo y fijo la fecha para hacer la evaluacion.
 Esa informacion te la debimos haber mandado por el grupo de WhatsApp, pero si no la encontras, escribinos asi te la reenviamos sin problema.
 Los peritos suelen fijar la fecha entre 15 y 45 dias antes de la pericia. Estate atento porque antes de la pericia nos vamos a comunicar con vos para explicarte como es el proceso y resolver cualquier duda. No tenes que llevar nada ese dia, solo presentarte.
 Estamos atentos para que se realice en tiempo y forma. Si hay algun cambio o novedad importante, tambien lo vamos a dejar publicado en el grupo como siempre.
 
-14 Ordenes medicas pendientes: Hola [nombre], en esta etapa estamos esperando que el juzgado nos autorice a realizar los estudios medicos previos a la pericia.
+14 Ordenes medicas pendientes: En esta etapa estamos esperando que el juzgado nos autorice a realizar los estudios medicos previos a la pericia.
 Una vez que se ordenan, coordinamos con nuestros prestadores medicos para gestionar los turnos y asegurarnos de que se hagan en tiempo y forma. Esta parte puede demorar varias semanas, dependiendo del juzgado que intervenga.
 Estamos atentos al expediente para que apenas se autoricen, podamos avanzar con los estudios y no se pierda tiempo.
 
-15 Haciendo estudios: Hola [nombre], estamos en la etapa de estudios medicos previos a la pericia.
+15 Haciendo estudios: Estamos en la etapa de estudios medicos previos a la pericia.
 A diferencia de otros estudios juridicos, en nuestro caso esta parte la trabajamos con mucho compromiso porque sabemos lo importante que es para tu reclamo. Contamos con nuestro propio equipo medico que se encarga de gestionar directamente los turnos, coordinar con los centros medicos, realizar los estudios y analizar los resultados para identificar las lesiones que pueden encuadrar dentro del baremo aprobado por el decreto 659/96, que es la normativa que establece una tabla medica obligatoria que los jueces utilizan para fijar el porcentaje de incapacidad segun el tipo de lesion.
 Esto ayuda a facilitar el trabajo del perito y mejorar las chances de obtener un buen resultado. Suele llevar entre 2 y 4 meses en total, ya que incluye coordinar los estudios y hacer el analisis completo antes de presentarlo en el expediente.
 Como esta es una etapa en la que necesitas hacerte los estudios, te avisamos por el grupo cada vez que hay un turno o novedad para coordinar con vos.
 
-16 Estudios presentados - pendiente pericia: Hola [nombre], ya se presentaron los estudios medicos en el expediente. Ahora estamos esperando que el perito los revise y elabore su dictamen.
+16 Estudios presentados - pendiente pericia: Ya se presentaron los estudios medicos en el expediente. Ahora estamos esperando que el perito los revise y elabore su dictamen.
 Esta etapa depende completamente del ritmo del perito. En CABA suelen tardar menos tiempo, pero en la Provincia de Buenos Aires muchos peritos tienen entre 2000 y 3000 casos a la vez, por lo que a veces demoran mas de 6 meses en dictaminar.
 Nosotros nos comunicamos de forma constante con los peritos para recordarles la importancia de tu caso y tratar de que aceleren el dictamen dentro de los plazos razonables.
 Sabemos que es una etapa que genera ansiedad, pero quedate tranquilo/a que estamos atentos y seguimos el expediente para que no se demore mas de lo necesario. Estamos atentos a los movimientos del expediente dentro del seguimiento habitual.
 
-17 Perito intimado: Hola [nombre], en este momento el expediente esta esperando que el perito presente su informe. Como todavia no lo hizo, le pedimos al juzgado que lo intime formalmente para que lo presente.
+17 Perito intimado: En este momento el expediente esta esperando que el perito presente su informe. Como todavia no lo hizo, le pedimos al juzgado que lo intime formalmente para que lo presente.
 Esta es una etapa que depende completamente del perito, y lamentablemente algunos tardan bastante en cumplir con este paso, especialmente en la Provincia de Buenos Aires donde tienen una gran carga de trabajo.
 Nosotros seguimos el expediente y estamos atentos a que se cumplan los plazos. Apenas tengamos novedades, te avisamos.
 
-18 Perito intimado - demorado: Hola [nombre], en este momento el expediente esta esperando que el perito presente su informe. Como todavia no lo hizo, le pedimos al juzgado que lo intime formalmente para que lo presente.
+18 Perito intimado - demorado: En este momento el expediente esta esperando que el perito presente su informe. Como todavia no lo hizo, le pedimos al juzgado que lo intime formalmente para que lo presente.
 Esta es una etapa que depende completamente del perito, y lamentablemente algunos tardan bastante en cumplir con este paso, especialmente en la Provincia de Buenos Aires donde tienen una gran carga de trabajo.
 Nosotros seguimos el expediente y estamos atentos a que se cumplan los plazos. Apenas tengamos novedades, te avisamos.
 
-19 Pericia presentada: Hola [nombre], ya tenemos una pericia medica presentada en el expediente. Esto es un avance importante, pero todavia falta una parte del proceso.
+19 Pericia presentada: Ya tenemos una pericia medica presentada en el expediente. Esto es un avance importante, pero todavia falta una parte del proceso.
 Una vez que se presenta la pericia, el juzgado le da traslado a ambas partes para que puedan hacer observaciones o pedir aclaraciones si algo no esta claro o es incompleto. En nuestro caso, analizamos el dictamen con Mati y su equipo medico y juridico para decidir si corresponde hacer alguna presentacion.
 Despues de eso, el perito debe volver a contestar, lo que en Provincia de Buenos Aires puede demorar bastante, ya que muchos tienen una gran carga de trabajo. A veces tardan varios meses en responder esas observaciones.
 Quedate tranquilo/a que nosotros controlamos cada paso, pero en esta etapa dependemos tanto del trabajo del perito como del juzgado, que tienen que ir resolviendo cada presentacion en los tiempos que manejan ellos.
 
-20 Aclaraciones pendientes: Hola [nombre], el expediente esta esperando que el perito conteste una aclaracion que pidio el juzgado o alguna de las partes.
+20 Aclaraciones pendientes: El expediente esta esperando que el perito conteste una aclaracion que pidio el juzgado o alguna de las partes.
 Esto pasa cuando algo del informe no esta del todo claro o falta algun detalle importante, y por eso se le pide al perito que lo aclare. Lamentablemente, este paso puede demorar, sobre todo si el perito tiene muchos expedientes encima, como suele pasar en Provincia de Buenos Aires.
 Nosotros ya hicimos el seguimiento y ahora dependemos de que el perito conteste. Apenas tengamos novedades, te avisamos. Quedate tranqui que lo estamos controlando.
 
-21 Aclaraciones pendientes - demorado: Hola [nombre], el expediente esta esperando que el perito conteste una aclaracion que pidio el juzgado o alguna de las partes.
+21 Aclaraciones pendientes - demorado: El expediente esta esperando que el perito conteste una aclaracion que pidio el juzgado o alguna de las partes.
 Esto pasa cuando algo del informe no esta del todo claro o falta algun detalle importante, y por eso se le pide al perito que lo aclare. Lamentablemente, este paso puede demorar, sobre todo si el perito tiene muchos expedientes encima, como suele pasar en Provincia de Buenos Aires.
 Nosotros ya hicimos el seguimiento y ahora dependemos de que el perito conteste. Apenas tengamos novedades, te avisamos. Quedate tranqui que lo estamos controlando.
 
-22 Aclaraciones contestadas: Hola [nombre], en este momento estamos controlando el expediente para asegurarnos de que no falte nada antes de pedir el pase a la etapa final de alegatos.
+22 Aclaraciones contestadas: En este momento estamos controlando el expediente para asegurarnos de que no falte nada antes de pedir el pase a la etapa final de alegatos.
 Revisamos que toda la prueba este completa, que los escritos esten presentados y que no haya cuestiones pendientes que puedan complicar el resultado. Es un momento clave porque nos permite encarar el cierre del juicio con todo en orden.
 Esta etapa suele durar entre 10 y 30 dias. No depende del juzgado, sino de nuestro trabajo interno para asegurarnos de que todo este en condiciones de pasar a la siguiente etapa sin sorpresas.
 Estamos atentos a cada detalle para que el caso este bien preparado cuando llegue el momento de la sentencia.
 
-23 Pericia lista - otra prueba pendiente: Hola [nombre], ya termino la etapa medica, pero todavia queda producir otra prueba necesaria para completar el expediente.
+23 Pericia lista - otra prueba pendiente: Ya termino la etapa medica, pero todavia queda producir otra prueba necesaria para completar el expediente.
 Puede tratarse de prueba testimonial, pedidos de informes, pericia contable u otro tipo de presentacion que sea clave para aclarar aspectos del caso y lograr el mejor resultado posible.
 Esta etapa depende de que se presenten correctamente esas pruebas y de que el juzgado las tramite, lo cual puede tardar entre 30 y 90 dias segun la carga de trabajo del tribunal.
 Quedate tranquilo/a que nosotros impulsamos el expediente y controlamos que se sigan todos los pasos.
 
 === ALEGATOS (estados 30 a 36) ===
 
-30 Prueba cerrada - controlar para alegar: Hola [nombre], en este momento estamos controlando el expediente para asegurarnos de que no falte nada antes de pedir el pase a la etapa final de alegatos.
+30 Prueba cerrada - controlar para alegar: En este momento estamos controlando el expediente para asegurarnos de que no falte nada antes de pedir el pase a la etapa final de alegatos.
 Revisamos que toda la prueba este completa, que los escritos esten presentados y que no haya cuestiones pendientes que puedan complicar el resultado. Es un momento clave porque nos permite encarar el cierre del juicio con todo en orden.
 Esta etapa suele durar entre 10 y 30 dias. No depende del juzgado, sino de nuestro trabajo interno para asegurarnos de que todo este en condiciones de pasar a la siguiente etapa sin sorpresas.
 Estamos atentos a cada detalle para que el caso este bien preparado cuando llegue el momento de la sentencia.
 
-31 Control alegar hecho: Hola [nombre], ya terminamos de controlar el expediente y confirmamos que esta todo en orden para pasar a la etapa de alegatos.
+31 Control alegar hecho: Ya terminamos de controlar el expediente y confirmamos que esta todo en orden para pasar a la etapa de alegatos.
 En esta instancia ya ofrecimos y produjimos toda la prueba, y revisamos que no falte nada. Ahora solo falta que el juzgado nos habilite formalmente a alegar.
 Desde este punto, dependemos del juzgado. Algunos lo hacen rapido y otros pueden tardar un poco mas. Nosotros seguimos el expediente de cerca para que no se frene.
 
-32 Pedimos pase a alegar: Hola [nombre], en esta etapa ya terminamos todo lo que dependia de nuestro trabajo: ofrecimos la prueba, la produjimos y controlamos que este todo en orden. Ahora le pedimos al juzgado que habilite el pase a la etapa de alegatos.
+32 Pedimos pase a alegar: En esta etapa ya terminamos todo lo que dependia de nuestro trabajo: ofrecimos la prueba, la produjimos y controlamos que este todo en orden. Ahora le pedimos al juzgado que habilite el pase a la etapa de alegatos.
 A partir de este punto, dependemos completamente del juzgado. Hay tribunales que lo hacen rapido, pero otros pueden demorar varios meses en mover el expediente. En algunos casos puede tardar mas de 6 meses en habilitar el pase.
 Nosotros seguimos el expediente para que no quede frenado y te mantenemos informado dentro de lo posible a traves del seguimiento habitual del expediente.
 
-33 Pedimos pase a alegar - demorado: Hola [nombre], en esta etapa ya terminamos todo lo que dependia de nuestro trabajo: ofrecimos la prueba, la produjimos y controlamos que este todo en orden. Ahora le pedimos al juzgado que habilite el pase a la etapa de alegatos.
+33 Pedimos pase a alegar - demorado: En esta etapa ya terminamos todo lo que dependia de nuestro trabajo: ofrecimos la prueba, la produjimos y controlamos que este todo en orden. Ahora le pedimos al juzgado que habilite el pase a la etapa de alegatos.
 A partir de este punto, dependemos completamente del juzgado. Hay tribunales que lo hacen rapido, pero otros pueden demorar varios meses en mover el expediente. En algunos casos puede tardar mas de 6 meses en habilitar el pase.
 Nosotros seguimos el expediente para que no quede frenado y te mantenemos informado dentro de lo posible a traves del seguimiento habitual del expediente.
 
 34 Paso a alegar: Nuestro trabajo ya esta hecho en esta etapa.
-Hola [nombre], el expediente ya paso a la etapa de alegatos. Eso significa que el juzgado nos habilito para presentar el alegato, que es un escrito donde cada parte resume todo lo que se produjo en el expediente y argumenta por que tiene razon.
+El expediente ya paso a la etapa de alegatos. Eso significa que el juzgado nos habilito para presentar el alegato, que es un escrito donde cada parte resume todo lo que se produjo en el expediente y argumenta por que tiene razon.
 Es un paso clave porque sirve como cierre antes de que el juez dicte sentencia. Una vez presentados los alegatos, el expediente queda listo para que el juzgado resuelva.
 El plazo para alegar suele ser de 5 dias en la Provincia de Buenos Aires y de 10 dias en CABA. Una vez presentados los alegatos, el expediente queda listo para que el juzgado dicte sentencia. Lo que puede demorar es que el juzgado tome nota del cumplimiento del plazo y avance con el expediente.
 
-35 Pedimos vista de causa: Hola [nombre], el juez fijo una audiencia de "vista de causa".
+35 Pedimos vista de causa: El juez fijo una audiencia de "vista de causa".
 Esa audiencia es una instancia formal donde el tribunal analiza directamente las pruebas que se produjeron en el juicio (testimoniales, informes, pericias, etc.) antes de dictar sentencia.
 Es un paso muy importante porque marca que el expediente ya esta cerca del final. Despues de esta audiencia, el juzgado queda en condiciones de dictar sentencia.
 Los tiempos pueden variar bastante segun la agenda del tribunal: algunos fijan fecha rapido y otros pueden demorar varios meses.
 Quedate tranqui, tu caso ya entro en la etapa decisiva.
 
-36 Vista de causa fijada: Hola [nombre], el juez fijo una audiencia de "vista de causa".
+36 Vista de causa fijada: El juez fijo una audiencia de "vista de causa".
 Esa audiencia es una instancia formal donde el tribunal analiza directamente las pruebas que se produjeron en el juicio (testimoniales, informes, pericias, etc.) antes de dictar sentencia.
 Es un paso muy importante porque marca que el expediente ya esta cerca del final. Despues de esta audiencia, el juzgado queda en condiciones de dictar sentencia.
 Los tiempos pueden variar bastante segun la agenda del tribunal: algunos fijan fecha rapido y otros pueden demorar varios meses.
@@ -511,84 +511,84 @@ Quedate tranqui, tu caso ya entro en la etapa decisiva.
 === SENTENCIA 1a INSTANCIA (estados 40 a 44) ===
 
 40 Pedimos sentencia: Nuestro trabajo ya esta hecho en esta etapa.
-Hola [nombre], ya presentamos el alegato final y solicitamos al juzgado que dicte sentencia.
+Ya presentamos el alegato final y solicitamos al juzgado que dicte sentencia.
 En esta etapa, nuestro trabajo ya esta hecho y ahora dependemos completamente del juzgado. El expediente esta listo para que se dicte resolucion, pero el tiempo que demora depende de la carga de trabajo del tribunal.
 En muchos casos pueden pasar varios meses hasta que el juez tome la decision. Mientras tanto, nosotros seguimos el expediente y te avisamos ni bien haya novedades.
 
 41 Pedimos sentencia - demorado: Nuestro trabajo ya esta hecho en esta etapa.
-Hola [nombre], ya presentamos el alegato final y solicitamos al juzgado que dicte sentencia.
+Ya presentamos el alegato final y solicitamos al juzgado que dicte sentencia.
 En esta etapa, nuestro trabajo ya esta hecho y ahora dependemos completamente del juzgado. El expediente esta listo para que se dicte resolucion, pero el tiempo que demora depende de la carga de trabajo del tribunal.
 En muchos casos pueden pasar varios meses hasta que el juez tome la decision. Mientras tanto, nosotros seguimos el expediente y te avisamos ni bien haya novedades.
 
 42 Paso a sentencia: Nuestro trabajo ya esta hecho en esta etapa.
-Hola [nombre], el expediente ya esta en manos del juez para que dicte sentencia.
+El expediente ya esta en manos del juez para que dicte sentencia.
 Segun la ley, los jueces tienen hasta 90 dias habiles para resolver, pero en la practica muchas veces demoran varios meses o incluso mas de un ano, dependiendo del juzgado y la complejidad del caso.
 Nosotros seguimos el expediente con regularidad para ver si hay movimientos, y te avisamos apenas haya una resolucion.
 
 43 Paso a sentencia - demorado: Nuestro trabajo ya esta hecho en esta etapa.
-Hola [nombre], el expediente ya esta en manos del juez para que dicte sentencia.
+El expediente ya esta en manos del juez para que dicte sentencia.
 Segun la ley, los jueces tienen hasta 90 dias habiles para resolver, pero en la practica muchas veces demoran varios meses o incluso mas de un ano, dependiendo del juzgado y la complejidad del caso.
 Nosotros seguimos el expediente con regularidad para ver si hay movimientos, y te avisamos apenas haya una resolucion.
 
-44 Sentencia de 1a instancia: Hola [nombre], el juzgado ya dicto sentencia de primera instancia.
+44 Sentencia de 1a instancia: El juzgado ya dicto sentencia de primera instancia.
 Si el fallo fue favorable, se puede ejecutar el cobro. Pero tambien es posible que la parte demandada apele, especialmente en Capital Federal donde existe una segunda instancia. En la Provincia de Buenos Aires, si corresponde, se puede apelar ante la Suprema Corte.
 Nosotros tambien analizamos la sentencia para ver si conviene apelar. A veces lo hacemos para pedir que reconozcan un mayor porcentaje de incapacidad o una mejor tasa de interes.
 En esta etapa Matias y su equipo de abogados evaluan con detalle que camino seguir para defender tu mejor resultado. Evaluamos cada paso con Matias y su equipo de abogados para tomar la mejor decision posible en tu caso.
 
 === ALZADA (estados 50 a 57) ===
 
-50 Pedi elevacion: Hola [nombre], el expediente esta en la etapa en la que el juzgado debe elevarlo a la Camara para que se revise la sentencia (por apelacion).
+50 Pedi elevacion: El expediente esta en la etapa en la que el juzgado debe elevarlo a la Camara para que se revise la sentencia (por apelacion).
 A partir de aca, todo depende del juzgado. Si bien no deberia demorar demasiado, en la practica pueden pasar hasta 2 meses o mas para que efectivamente se eleve el expediente.
 Matias y su equipo de abogados hacen el seguimiento habitual para verificar que se cumplan los pasos.
 
-51 Ordenan elevacion: Hola [nombre], el expediente esta en la etapa en la que el juzgado debe elevarlo a la Camara para que se revise la sentencia (por apelacion).
+51 Ordenan elevacion: El expediente esta en la etapa en la que el juzgado debe elevarlo a la Camara para que se revise la sentencia (por apelacion).
 A partir de aca, todo depende del juzgado. Si bien no deberia demorar demasiado, en la practica pueden pasar hasta 2 meses o mas para que efectivamente se eleve el expediente.
 Matias y su equipo de abogados hacen el seguimiento habitual para verificar que se cumplan los pasos.
 
-52 Alzada INICIO: Hola [nombre], la Camara ya tomo el expediente. En lugar de resolver directamente, decidio abrirlo a prueba porque reclamamos que no se habia producido alguna prueba que era clave para resolver correctamente el caso.
+52 Alzada INICIO: La Camara ya tomo el expediente. En lugar de resolver directamente, decidio abrirlo a prueba porque reclamamos que no se habia producido alguna prueba que era clave para resolver correctamente el caso.
 Esto puede pasar cuando falta una pericia, una prueba testimonial, o algun informe importante. Ahora se abre una nueva instancia donde deben producirse esas pruebas antes de que la Camara pueda dictar sentencia.
 Esta etapa puede demorar entre 3 y 6 meses, dependiendo de que pruebas se ordenen y como responda el juzgado y las partes.
 
-53 Alzada PRUEBA: Hola [nombre], la Camara ya tomo el expediente. En lugar de resolver directamente, decidio abrirlo a prueba porque reclamamos que no se habia producido alguna prueba que era clave para resolver correctamente el caso.
+53 Alzada PRUEBA: La Camara ya tomo el expediente. En lugar de resolver directamente, decidio abrirlo a prueba porque reclamamos que no se habia producido alguna prueba que era clave para resolver correctamente el caso.
 Esto puede pasar cuando falta una pericia, una prueba testimonial, o algun informe importante. Ahora se abre una nueva instancia donde deben producirse esas pruebas antes de que la Camara pueda dictar sentencia.
 Esta etapa puede demorar entre 3 y 6 meses, dependiendo de que pruebas se ordenen y como responda el juzgado y las partes.
 
-54 Alzada SENTENCIA: Hola [nombre], la Camara ya tomo el expediente y estamos esperando que dicte sentencia. Esta es una etapa que puede demorar bastante, dependiendo de la sala que toque.
+54 Alzada SENTENCIA: La Camara ya tomo el expediente y estamos esperando que dicte sentencia. Esta es una etapa que puede demorar bastante, dependiendo de la sala que toque.
 Hay 10 salas en total: 9 suelen dictar sentencia en un plazo razonable de hasta un ano, pero una de ellas, la Sala III, puede demorar hasta 3 anos en resolver. Por eso, los plazos son muy variables.
 Durante esta etapa no hay intervenciones posibles por parte nuestra, pero Mati y su equipo de abogados siguen el expediente con regularidad hasta que salga la resolucion.
 
-55 Alzada SENTENCIA - demorado: Hola [nombre], la Camara ya tomo el expediente y estamos esperando que dicte sentencia. Esta es una etapa que puede demorar bastante, dependiendo de la sala que toque.
+55 Alzada SENTENCIA - demorado: La Camara ya tomo el expediente y estamos esperando que dicte sentencia. Esta es una etapa que puede demorar bastante, dependiendo de la sala que toque.
 Hay 10 salas en total: 9 suelen dictar sentencia en un plazo razonable de hasta un ano, pero una de ellas, la Sala III, puede demorar hasta 3 anos en resolver. Por eso, los plazos son muy variables.
 Durante esta etapa no hay intervenciones posibles por parte nuestra, pero Mati y su equipo de abogados siguen el expediente con regularidad hasta que salga la resolucion.
 
-56 Sentencia 2o instancia: Hola [nombre], la Camara ya dicto sentencia de segunda instancia. Puede haber ratificado o modificado lo que dijo el juzgado de primera instancia.
+56 Sentencia 2o instancia: La Camara ya dicto sentencia de segunda instancia. Puede haber ratificado o modificado lo que dijo el juzgado de primera instancia.
 Probablemente estemos cerca de poder cobrar, pero ahora hay que esperar 10 dias habiles porque la parte demandada podria interponer un recurso ante la Corte Suprema de Justicia de la Nacion.
 Dependiendo del contenido de la sentencia, Mati y su equipo de abogados evaluan si corresponde seguir con alguna presentacion mas. Si no hay apelaciones, se avanza con la ejecucion.
 
-57 Metieron recurso - pendiente concesion: Hola [nombre], la Camara ya dicto sentencia de segunda instancia. Puede haber ratificado o modificado lo que dijo el juzgado de primera instancia.
+57 Metieron recurso - pendiente concesion: La Camara ya dicto sentencia de segunda instancia. Puede haber ratificado o modificado lo que dijo el juzgado de primera instancia.
 Probablemente estemos cerca de poder cobrar, pero ahora hay que esperar 10 dias habiles porque la parte demandada podria interponer un recurso ante la Corte Suprema de Justicia de la Nacion.
 Dependiendo del contenido de la sentencia, Mati y su equipo de abogados evaluan si corresponde seguir con alguna presentacion mas. Si no hay apelaciones, se avanza con la ejecucion.
 
 === RECURSOS EXTRAORDINARIOS (estados 60 a 64) ===
 
-60 Recurso extraordinario: Hola [nombre], tu expediente esta en la etapa de recurso extraordinario o queja ante la Corte Suprema de Justicia de la Nacion.
+60 Recurso extraordinario: Tu expediente esta en la etapa de recurso extraordinario o queja ante la Corte Suprema de Justicia de la Nacion.
 Esto significa que se presento un planteo para que la Corte revise lo que resolvio la Camara. Es una instancia excepcional: la Corte solo acepta tratar algunos casos muy puntuales y, en la mayoria, directamente rechaza el recurso sin entrar a analizarlo.
 Si la Corte decide estudiarlo, el tramite puede demorar bastante, incluso mas de un ano, porque prioriza expedientes que considera de mayor trascendencia institucional.
 En esta etapa no se producen pruebas nuevas ni audiencias, simplemente se espera a que la Corte resuelva si acepta o no el recurso y, eventualmente, que decision toma.
 Quedate tranqui que seguimos el expediente con regularidad mientras este en esta instancia.
 
-61 Queja ante CSJN: Hola [nombre], tu expediente esta en la etapa de recurso extraordinario o queja ante la Corte Suprema de Justicia de la Nacion.
+61 Queja ante CSJN: Tu expediente esta en la etapa de recurso extraordinario o queja ante la Corte Suprema de Justicia de la Nacion.
 Esto significa que se presento un planteo para que la Corte revise lo que resolvio la Camara. Es una instancia excepcional: la Corte solo acepta tratar algunos casos muy puntuales y, en la mayoria, directamente rechaza el recurso sin entrar a analizarlo.
 Si la Corte decide estudiarlo, el tramite puede demorar bastante, incluso mas de un ano, porque prioriza expedientes que considera de mayor trascendencia institucional.
 En esta etapa no se producen pruebas nuevas ni audiencias, simplemente se espera a que la Corte resuelva si acepta o no el recurso y, eventualmente, que decision toma.
 Quedate tranqui que seguimos el expediente con regularidad mientras este en esta instancia.
 
-62 CSJN - en tramite: Hola [nombre], el expediente fue elevado a la Corte Suprema de Justicia de la Nacion.
+62 CSJN - en tramite: El expediente fue elevado a la Corte Suprema de Justicia de la Nacion.
 Esta es una etapa excepcional en la que la Corte puede revisar lo que resolvio la Camara, pero no siempre lo hace. En muchos casos el recurso ni siquiera es tratado.
 El tiempo de espera depende de que sala intervino y si la Corte decide o no intervenir. En general, esta etapa puede demorar mas de un ano y no hay plazos fijos.
 Mati y su equipo de abogados siguen el expediente con seguimiento habitual para ver si la Corte toma alguna resolucion.
 
-63 SCBA - en tramite: Hola [nombre], el expediente fue elevado a la Corte Suprema de Justicia de la Nacion.
+63 SCBA - en tramite: El expediente fue elevado a la Corte Suprema de Justicia de la Nacion.
 Esta es una etapa excepcional en la que la Corte puede revisar lo que resolvio la Camara, pero no siempre lo hace. En muchos casos el recurso ni siquiera es tratado.
 El tiempo de espera depende de que sala intervino y si la Corte decide o no intervenir. En general, esta etapa puede demorar mas de un ano y no hay plazos fijos.
 Mati y su equipo de abogados siguen el expediente con seguimiento habitual para ver si la Corte toma alguna resolucion.
@@ -597,42 +597,42 @@ Mati y su equipo de abogados siguen el expediente con seguimiento habitual para 
 
 === EJECUCION (estados 70 a 77) ===
 
-70 Practicar liquidacion: Hola [nombre], estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
+70 Practicar liquidacion: Estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
 Nosotros o el juzgado practicamos una liquidacion, que generalmente es impugnada por la demandada. Luego se da traslado de esa impugnacion para que podamos responder, y finalmente el juzgado define el monto exacto que corresponde.
 Una vez que el juez fija la suma, intima a la parte demandada a pagar. A partir de ahi, dependemos de si el demandado paga voluntariamente o si tenemos que iniciar medidas como el embargo.
 Esta etapa puede durar hasta 6 meses, dependiendo del juzgado y de la voluntad de pago de la parte demandada.
 
-71 Liquidacion practicada: Hola [nombre], estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
+71 Liquidacion practicada: Estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
 Nosotros o el juzgado practicamos una liquidacion, que generalmente es impugnada por la demandada. Luego se da traslado de esa impugnacion para que podamos responder, y finalmente el juzgado define el monto exacto que corresponde.
 Una vez que el juez fija la suma, intima a la parte demandada a pagar. A partir de ahi, dependemos de si el demandado paga voluntariamente o si tenemos que iniciar medidas como el embargo.
 Esta etapa puede durar hasta 6 meses, dependiendo del juzgado y de la voluntad de pago de la parte demandada.
 
-72 Pedimos embargo: Hola [nombre], estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
+72 Pedimos embargo: Estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
 Nosotros o el juzgado practicamos una liquidacion, que generalmente es impugnada por la demandada. Luego se da traslado de esa impugnacion para que podamos responder, y finalmente el juzgado define el monto exacto que corresponde.
 Una vez que el juez fija la suma, intima a la parte demandada a pagar. A partir de ahi, dependemos de si el demandado paga voluntariamente o si tenemos que iniciar medidas como el embargo.
 Esta etapa puede durar hasta 6 meses, dependiendo del juzgado y de la voluntad de pago de la parte demandada.
 
-73 Se ordeno giro actor: Hola [nombre], estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
+73 Se ordeno giro actor: Estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
 Nosotros o el juzgado practicamos una liquidacion, que generalmente es impugnada por la demandada. Luego se da traslado de esa impugnacion para que podamos responder, y finalmente el juzgado define el monto exacto que corresponde.
 Una vez que el juez fija la suma, intima a la parte demandada a pagar. A partir de ahi, dependemos de si el demandado paga voluntariamente o si tenemos que iniciar medidas como el embargo.
 Esta etapa puede durar hasta 6 meses, dependiendo del juzgado y de la voluntad de pago de la parte demandada.
 
-74 Se ordeno giro nuestro: Hola [nombre], estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
+74 Se ordeno giro nuestro: Estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
 Nosotros o el juzgado practicamos una liquidacion, que generalmente es impugnada por la demandada. Luego se da traslado de esa impugnacion para que podamos responder, y finalmente el juzgado define el monto exacto que corresponde.
 Una vez que el juez fija la suma, intima a la parte demandada a pagar. A partir de ahi, dependemos de si el demandado paga voluntariamente o si tenemos que iniciar medidas como el embargo.
 Esta etapa puede durar hasta 6 meses, dependiendo del juzgado y de la voluntad de pago de la parte demandada.
 
-75 Intereses: Hola [nombre], estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
+75 Intereses: Estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
 Nosotros o el juzgado practicamos una liquidacion, que generalmente es impugnada por la demandada. Luego se da traslado de esa impugnacion para que podamos responder, y finalmente el juzgado define el monto exacto que corresponde.
 Una vez que el juez fija la suma, intima a la parte demandada a pagar. A partir de ahi, dependemos de si el demandado paga voluntariamente o si tenemos que iniciar medidas como el embargo.
 Esta etapa puede durar hasta 6 meses, dependiendo del juzgado y de la voluntad de pago de la parte demandada.
 
-76 Regulacion honorarios: Hola [nombre], estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
+76 Regulacion honorarios: Estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
 Nosotros o el juzgado practicamos una liquidacion, que generalmente es impugnada por la demandada. Luego se da traslado de esa impugnacion para que podamos responder, y finalmente el juzgado define el monto exacto que corresponde.
 Una vez que el juez fija la suma, intima a la parte demandada a pagar. A partir de ahi, dependemos de si el demandado paga voluntariamente o si tenemos que iniciar medidas como el embargo.
 Esta etapa puede durar hasta 6 meses, dependiendo del juzgado y de la voluntad de pago de la parte demandada.
 
-77 Conciliado: Hola [nombre], estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
+77 Conciliado: Estamos en la etapa de ejecucion de sentencia. En esta instancia hay que ponerse de acuerdo con el juzgado sobre el monto final que corresponde pagar, segun el metodo de actualizacion que fijo la sentencia.
 Nosotros o el juzgado practicamos una liquidacion, que generalmente es impugnada por la demandada. Luego se da traslado de esa impugnacion para que podamos responder, y finalmente el juzgado define el monto exacto que corresponde.
 Una vez que el juez fija la suma, intima a la parte demandada a pagar. A partir de ahi, dependemos de si el demandado paga voluntariamente o si tenemos que iniciar medidas como el embargo.
 Esta etapa puede durar hasta 6 meses, dependiendo del juzgado y de la voluntad de pago de la parte demandada.
@@ -653,9 +653,9 @@ Esta etapa puede durar hasta 6 meses, dependiendo del juzgado y de la voluntad d
 
 90 Somos parte demandada: Este es un expediente donde nos demandan a nosotros. Es un caso especial que maneja directamente Mati.
 
-91 Paralizado: Hola [nombre], tu expediente esta paralizado, sin movimiento en este momento. Le paso tu consulta a Mati para que revise que paso y se comuniquen con vos en 24 a 48 horas.
+91 Paralizado: Tu expediente esta paralizado, sin movimiento en este momento. Le paso tu consulta a Mati para que revise que paso y se comuniquen con vos en 24 a 48 horas.
 
-92 Pendiente de revision: Hola [nombre], tu expediente esta pendiente de una revision interna por parte del equipo. Le paso tu consulta a Mati para que lo revisen y se comuniquen con vos en 24 a 48 horas.
+92 Pendiente de revision: Tu expediente esta pendiente de una revision interna por parte del equipo. Le paso tu consulta a Mati para que lo revisen y se comuniquen con vos en 24 a 48 horas.
 
 ---
 
