@@ -229,6 +229,17 @@ def extraer_etapa(estado_str: str) -> int:
     return ESTADO_A_ETAPA.get(num, 1)
 
 
+def es_caso_finalizado(estado_str: str) -> bool:
+    """Devuelve True si el estado corresponde a un caso finalizado (80-84)."""
+    if not estado_str:
+        return False
+    match = re.match(r"(\d+)", estado_str)
+    if not match:
+        return False
+    num = match.group(1).zfill(2)
+    return num in ("80", "81", "82", "83", "84")
+
+
 # ============================================================
 # SEGUIMIENTOS POR ETAPA (misma data que portal-clientes)
 # ============================================================
@@ -920,10 +931,20 @@ async def buscar_caso(nombre: str) -> str:
 
     casos = []
     for r in resultados:
+        estado = r.get("estado", "Sin estado registrado")
+        # No mostrar casos finalizados (estados 80-84) al cliente
+        if es_caso_finalizado(estado):
+            continue
         casos.append({
             "expediente_id": r.get("id", ""),
             "caratula": limpiar_caratula(r.get("caratula", "")),
-            "estado": r.get("estado", "Sin estado registrado"),
+            "estado": estado,
+        })
+
+    if not casos:
+        return json.dumps({
+            "mensaje": f"No se encontraron casos activos para '{nombre}'.",
+            "sugerencia": "Verificar que el nombre esté bien escrito o probar con el apellido solamente.",
         })
 
     return json.dumps({"cantidad_resultados": len(casos), "casos": casos}, ensure_ascii=False)
@@ -1096,6 +1117,10 @@ async def consultar_movimientos(expediente_id: int) -> str:
                         estado_str = data2[0].get("estado", "")
     except Exception:
         pass
+
+    # No mostrar movimientos de casos finalizados (estados 80-84)
+    if es_caso_finalizado(estado_str):
+        return json.dumps({"mensaje": "No se encontraron movimientos para este expediente."})
 
     try:
         movimientos = await obtener_y_generar_movimientos(
